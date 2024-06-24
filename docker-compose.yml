@@ -37,7 +37,7 @@ services:
   phpmyadmin:
     image: phpmyadmin
     container_name: phpmyadmin
-    restart: always
+    restart: unless-stopped
     ports:
       - 8090:80
     environment:
