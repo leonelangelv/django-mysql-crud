@@ -1,15 +1,24 @@
-
 {% load static %}
- 
+
 <a href="/category">Display</a>
 
-<form method="POST" action="/category/update/"  id="myform" enctype="multipart/form-data">
+<form method="POST" action="/category/update/" id="myform" enctype="multipart/form-data">
     {% csrf_token %}
 
-     <input type="hidden" name="txt1" value="{{categories.0}}" >
-Name  <input type="text" name="txt2" value="{{categories.1}}">
-   <br/>
-    <button type="submit" >Update Data</button>
+    <input type="hidden" name="car_id" value="{{car.0}}">
+
+    <div>
+        <label for="make">Marca</label>
+        <input type="text" name="make" value="{{car.1}}">
+    </div>
+    <div>
+        <label for="model">Modelo</label>
+        <input type="text" name="model" value="{{car.2}}">
+    </div>
+    <div>
+        <label for="year">Año</label>
+        <input type="number" name="year" value="{{car.3}}">
+    </div>
+    <button type="submit">Update Data</button>
 </form>
 </div>
-

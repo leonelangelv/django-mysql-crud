@@ -1,14 +1,22 @@
-
 {% load static %}
- 
-    <a href="/category">Display</a>
- 
-	<form method="POST" action="/category/inserted/"  id="myform" enctype="multipart/form-data">
-		{% csrf_token %}
 
-    Name  <input type="text" name="txt1" >
-       <br/>
-        <button type="submit" >Insert Data</button>
-	</form>
+<a href="/category">Display</a>
+
+<form method="POST" action="/category/inserted/" id="myform" enctype="multipart/form-data">
+  {% csrf_token %}
+
+  <div>
+    <label for="make">Marca</label>
+    <input type="text" name="make">
+  </div>
+  <div>
+    <label for="model">Modelo</label>
+    <input type="text" name="model">
+  </div>
+  <div>
+    <label for="year">Año</label>
+    <input type="number" name="year">
+  </div>
+  <button type="submit">Insert Data</button>
+</form>
 </div>
- 

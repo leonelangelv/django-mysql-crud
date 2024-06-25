@@ -1,22 +1,26 @@
-CREATE TABLE autos (
+CREATE TABLE cars (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    marca VARCHAR(50) NOT NULL,
-    modelo VARCHAR(50) NOT NULL,
-    anio YEAR NOT NULL
+    make VARCHAR(50) NOT NULL,
+    model VARCHAR(50) NOT NULL,
+    year YEAR NOT NULL
 );
 
 
 -- CREATE
-INSERT INTO autos (marca, modelo, anio)
-VALUES ('Toyota', 'Corolla', 2022);
+INSERT INTO cars (make, model, year) VALUES ('Toyota', 'Corolla', 2020);
+INSERT INTO cars (make, model, year) VALUES ('Honda', 'Civic', 2019);
+INSERT INTO cars (make, model, year) VALUES ('Ford', 'Mustang', 2021);
+INSERT INTO cars (make, model, year) VALUES ('Chevrolet', 'Malibu', 2018);
+INSERT INTO cars (make, model, year) VALUES ('Nissan', 'Altima', 2022);
+
 
 -- READ
-SELECT * FROM autos;
+SELECT * FROM cars;
 
 -- UPDATE
-UPDATE autos
-SET marca = 'Honda', modelo = 'Accord', anio = 2023
+UPDATE cars
+SET make = 'Honda', model = 'Accord', year = 2023
 WHERE id = 1;
 
 -- DELETE 
-DELETE FROM autos WHERE id = 1;
+DELETE FROM cars WHERE id = 1;
