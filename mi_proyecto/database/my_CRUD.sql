@@ -12,15 +12,3 @@ INSERT INTO cars (make, model, year) VALUES ('Honda', 'Civic', 2019);
 INSERT INTO cars (make, model, year) VALUES ('Ford', 'Mustang', 2021);
 INSERT INTO cars (make, model, year) VALUES ('Chevrolet', 'Malibu', 2018);
 INSERT INTO cars (make, model, year) VALUES ('Nissan', 'Altima', 2022);
-
-
--- READ
-SELECT * FROM cars;
-
--- UPDATE
-UPDATE cars
-SET make = 'Honda', model = 'Accord', year = 2023
-WHERE id = 1;
-
--- DELETE 
-DELETE FROM cars WHERE id = 1;
